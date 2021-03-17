@@ -13,10 +13,14 @@ class _NavigationBarState extends State<NavigationBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width,
-      height: 50,
+      margin: EdgeInsets.only(top: 0, right: 10),
+        alignment: Alignment.centerLeft,
+      // width: MediaQuery.of(context).size.width,
+      // height: 50,
+       width: 150,
+      height:  MediaQuery.of(context).size.height * 0.5,
       color: Colors.purple,
-      child: Row(
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -38,7 +42,9 @@ class _NavigationBarState extends State<NavigationBar> {
             routeName: routeContacts,
             onHighlight: onHighlight,
           ),
-          IconButton(icon: Icon(Icons.menu), onPressed: () => {}),
+          // IconButton(icon: Icon(Icons.menu), onPressed: () => {
+          //   barraMenu(),
+          // }),
         ],
       ),
     );

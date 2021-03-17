@@ -24,31 +24,15 @@ class _AppViewState extends State<AppView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       backgroundColor: Colors.yellow,
-      body: Column(
+      body: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Column(
-            children: [
-              NavigationBar(),
-            ],
-          ),
-          Column(
-            children: [
-              Column(
-                children: [
-                  barraMenu(),
-                ],
-              ),
-            ],
-          ),
-          Container(
-            width: 100,
-            height: 100,
-            child: widget.child),
-
-          //Expanded(child: widget.child),
+          NavigationBar(),
+          Expanded(child: widget.child),
+          //barraMenu(),
         ],
       ),
     );

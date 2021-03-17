@@ -52,7 +52,7 @@ class InteractiveTextState extends State<InteractiveText> {
               ? kPageTitleStyle.copyWith(
                   color: Colors.indigo, fontSize: 18, decoration: TextDecoration.underline)
               : (widget.selected)
-                  ? kPageTitleStyle.copyWith(color: Colors.white, fontSize: 20)
+                  ? kPageTitleStyle.copyWith(color: Colors.white, fontSize: 18)
                   : kPageTitleStyle.copyWith(
                   color: Colors.black, fontSize: 18)),
     );

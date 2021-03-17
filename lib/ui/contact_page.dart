@@ -10,8 +10,8 @@ class ContactPage extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 200,
-              width: 200,
+              //height: 500,
+              width: 1300,
               color: Colors.pink,
               child: Text(
                 'Contact Page One',
@@ -19,8 +19,8 @@ class ContactPage extends StatelessWidget {
               ),
             ),
             Container(
-              height: 200,
-              width: 200,
+             //height: 500,
+              width: 1300,
               color: Colors.blue,
               child: Text(
                 'Otro contenedor Mapas',
@@ -28,11 +28,11 @@ class ContactPage extends StatelessWidget {
               ),
             ),
             Container(
-              height: 200,
-              width: 200,
+              height: 250,
+              width: 1300,
               color: Colors.brown,
               child: Text(
-                'Otro contenedor Mapas',
+                'Otro contenedor Localizacion',
                 style: TextStyle(fontSize: 30),
               ),
             ),
