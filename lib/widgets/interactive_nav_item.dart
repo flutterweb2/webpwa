@@ -50,10 +50,11 @@ class InteractiveTextState extends State<InteractiveText> {
       child: Text(widget.text,
           style: _hovering
               ? kPageTitleStyle.copyWith(
-                  color: Colors.indigo, decoration: TextDecoration.underline)
+                  color: Colors.indigo, fontSize: 18, decoration: TextDecoration.underline)
               : (widget.selected)
-                  ? kPageTitleStyle.copyWith(color: Colors.red)
-                  : kPageTitleStyle),
+                  ? kPageTitleStyle.copyWith(color: Colors.white, fontSize: 20)
+                  : kPageTitleStyle.copyWith(
+                  color: Colors.black, fontSize: 18)),
     );
   }
 
