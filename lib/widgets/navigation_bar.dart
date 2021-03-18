@@ -31,7 +31,7 @@ class _NavigationBarState extends State<NavigationBar> {
       // height: 50,
       width: 150,
       height: MediaQuery.of(context).size.height * 0.5,
-      color: Colors.purple,
+      color: Color(0xFF808080).withOpacity(0.5),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,
@@ -96,7 +96,7 @@ class _NavigationBarState extends State<NavigationBar> {
       // height: 50,
       width: 90,
       height: MediaQuery.of(context).size.height * 0.5,
-      color: Colors.orange,
+      color: Color(0xFF808080).withOpacity(0.5),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,
