@@ -2,21 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:walk/routes/routes.dart';
 import 'package:walk/widgets/interactive_nav_item.dart';
 
-
 class NavigationItem extends StatelessWidget {
   final String title;
   final String routeName;
   final bool selected;
   final Function onHighlight;
 
-  const NavigationItem({
-    @required this.title,
-    @required this.routeName,
-    @required this.selected,
-    @required this.onHighlight,
-  });
+  const NavigationItem(
+      {@required this.title,
+      @required this.routeName,
+      @required this.selected,
+      @required this.onHighlight});
 
-  @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     double width = size.width > size.height ? size.height : size.width;
@@ -61,6 +58,4 @@ class NavigationItem extends StatelessWidget {
       ),
     );
   }
-
- 
 }

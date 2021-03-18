@@ -40,23 +40,50 @@ class InteractiveText extends StatefulWidget {
 }
 
 class InteractiveTextState extends State<InteractiveText> {
-  bool _hovering = false;
+  bool _hovering = false;  
 
   @override
   Widget build(BuildContext context) {
-    return MouseRegion(
-      onHover: (_) => _hovered(true),
-      onExit: (_) => _hovered(false),
-      child: Text(widget.text,
-          style: _hovering
-              ? kPageTitleStyle.copyWith(
-                  color: Colors.indigo, fontSize: 18, decoration: TextDecoration.underline)
-              : (widget.selected)
-                  ? kPageTitleStyle.copyWith(color: Colors.white, fontSize: 18)
-                  : kPageTitleStyle.copyWith(
-                  color: Colors.black, fontSize: 18)),
-    );
+     Size size = MediaQuery.of(context).size;
+    double width = size.width > size.height ? size.height : size.width;
+
+    if (width > 600) {
+      return estiloFuente();
+    } else {
+     return estiloFuentePhone();
+    }      
   }
+
+  MouseRegion estiloFuente() {
+    return MouseRegion(
+    onHover: (_) => _hovered(true),
+    onExit: (_) => _hovered(false),
+    child: Text(widget.text,
+        style: _hovering
+            ? kPageTitleStyle.copyWith(
+                color: Colors.indigo, fontSize: 18, decoration: TextDecoration.underline)
+            : (widget.selected)
+                ? kPageTitleStyle.copyWith(color: Colors.white, fontSize: 18)
+                : kPageTitleStyle.copyWith(
+                color: Colors.black, fontSize: 18)),
+  );
+  }
+
+   MouseRegion estiloFuentePhone() {
+    return MouseRegion(
+    onHover: (_) => _hovered(true),
+    onExit: (_) => _hovered(false),
+    child: Text(widget.text,
+        style: _hovering
+            ? kPageTitleStyle.copyWith(
+                color: Colors.indigo, fontSize: 14, decoration: TextDecoration.underline)
+            : (widget.selected)
+                ? kPageTitleStyle.copyWith(color: Colors.white, fontSize: 14)
+                : kPageTitleStyle.copyWith(
+                color: Colors.black, fontSize: 14)),
+  );
+  }
+  
 
   _hovered(bool hovered) {
     setState(() {
@@ -64,3 +91,4 @@ class InteractiveTextState extends State<InteractiveText> {
     });
   }
 }
+
