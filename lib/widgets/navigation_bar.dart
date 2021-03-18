@@ -70,25 +70,13 @@ class _NavigationBarState extends State<NavigationBar> {
       alignment: Alignment.centerLeft,
       // width: MediaQuery.of(context).size.width,
       // height: 50,
-      width: 150,
+      width: 80,
       height: MediaQuery.of(context).size.height * 0.5,
-      color: Colors.purple,
+      color: Colors.orange,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,
-        children: [
-          IconButton(
-          icon: new Icon(Icons.more_vert), iconSize: 8,
-          tooltip: 'Home',                 
-          onPressed: () {   
-            setState(() {
-               
-              //selected[index] = !selected.elementAt(index);
-            });
-                       
-                     
-          },
-          ),
+        children: [          
           NavigationItem(
             selected: index == 0,
             title: 'Home',

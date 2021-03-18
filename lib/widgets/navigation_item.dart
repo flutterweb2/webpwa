@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:walk/routes/routes.dart';
 import 'package:walk/widgets/interactive_nav_item.dart';
-import 'package:walk/widgets/interactive_nav_item_phone.dart';
+
 
 class NavigationItem extends StatelessWidget {
   final String title;
@@ -52,9 +52,8 @@ class NavigationItem extends StatelessWidget {
         onHighlight(routeName);
       },
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 5.0),
-        child: InteractiveNavItemPhone(
-          //icons: Icon icons,
+        padding: const EdgeInsets.symmetric(vertical: 20.0),
+        child: InteractiveNavItem(
           text: title,
           routeName: routeName,
           selected: selected,
@@ -62,4 +61,6 @@ class NavigationItem extends StatelessWidget {
       ),
     );
   }
+
+ 
 }
