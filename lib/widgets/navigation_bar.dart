@@ -78,6 +78,20 @@ class _NavigationBarState extends State<NavigationBar> {
             ],
           ),
            Divider(),
+           Row(
+            children: [
+              SizedBox(width: 7,),
+              Icon(Icons.list, size: 19, color: Colors.black,),
+              SizedBox(width: 7,),
+             NavigationItem(
+                selected: index == 3,
+                title: 'Productos',
+                routeName: routeListProducts,
+                onHighlight: onHighlight,
+              ),
+            ],
+          ),
+           Divider(),
           // IconButton(icon: Icon(Icons.menu), onPressed: () => {
           //   barraMenu(),
           // }),
@@ -136,6 +150,19 @@ class _NavigationBarState extends State<NavigationBar> {
                 selected: index == 2,
                 title: 'Contact',
                 routeName: routeContacts,
+                onHighlight: onHighlight,
+              ),
+            ],
+          ),
+           Row(
+            children: [
+              SizedBox(width: 7,),
+              Icon(Icons.list, size: 18, color: Colors.white,),
+              SizedBox(width: 7,),
+              NavigationItem(
+                selected: index == 3,
+                title: 'Productos',
+                routeName: routeListProducts,
                 onHighlight: onHighlight,
               ),
             ],

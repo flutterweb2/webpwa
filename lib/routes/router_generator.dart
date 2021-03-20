@@ -4,6 +4,7 @@ import 'package:walk/routes/routes.dart';
 import 'package:walk/ui/about_page.dart';
 import 'package:walk/ui/contact_page.dart';
 import 'package:walk/ui/home_page.dart';
+import 'package:walk/ui/products/list_product_page.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -16,6 +17,9 @@ class RouteGenerator {
         break;
       case routeContacts:
         return MaterialPageRoute(builder: (_) => ContactPage());
+        break;
+      case routeListProducts:
+        return MaterialPageRoute(builder: (_) => ListProductsPage());
         break;
     }
   }

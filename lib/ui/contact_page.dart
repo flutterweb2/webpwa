@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:walk/controllers/products_controller.dart';
+import 'package:walk/routes/routes.dart';
 
 class ContactPage extends StatefulWidget {
   @override
@@ -9,16 +10,15 @@ class ContactPage extends StatefulWidget {
 }
 
 class _ContactPageState extends State<ContactPage> {
+  //DataBaseHelper databaseHelper = new DataBaseHelper();
 
-  DataBaseHelper databaseHelper = new DataBaseHelper();
-
-  final TextEditingController _nameController = new TextEditingController();  
+  final TextEditingController _nameController = new TextEditingController();
   final TextEditingController _emailController = new TextEditingController();
   final TextEditingController _adrressController = new TextEditingController();
-  final TextEditingController _phoneController = new TextEditingController();  
-  final TextEditingController _instagramController = new TextEditingController();
+  final TextEditingController _phoneController = new TextEditingController();
+  final TextEditingController _instagramController =
+      new TextEditingController();
   final TextEditingController _twitterController = new TextEditingController();
-
 
   final myController = TextEditingController();
   DateTime selectedDate;
@@ -199,12 +199,22 @@ class _ContactPageState extends State<ContactPage> {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton(
-                    onPressed: () {
-                      databaseHelper.addDataProducto(
-                        _nameController.text.trim(), _emailController.text.trim(), _adrressController.text.trim(), _phoneController.text.trim(), _instagramController.text.trim(), _twitterController.text.trim(),
-                        );
+                    onPressed: () {                     
+                      getData();
                     },
                     child: Text('Agregar'),
+                  ),
+                ),
+              ),
+              BootstrapCol(
+                sizes: 'col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3',
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ElevatedButton(
+                    onPressed: () {                     
+                      navKey.currentState.pushNamed('/listProducts');
+                    },
+                    child: Text('Listar'),
                   ),
                 ),
               ),
